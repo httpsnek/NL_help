@@ -217,7 +217,7 @@ button { font: inherit; cursor: pointer; }
 .services__intro { color: var(--ink-2); }
 
 .service {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  display: grid; grid-template-columns: 200px 1fr 1fr; gap: 40px;
   padding: 36px 0;
   border-top: 2px solid var(--ink);
 }
@@ -229,6 +229,38 @@ button { font: inherit; cursor: pointer; }
 .menu i { flex: 1; border-bottom: 1px dotted var(--ink-3); transform: translateY(-5px); min-width: 20px; }
 .menu b { font-weight: 700; white-space: nowrap; }
 .menu b span { font-weight: 400; color: var(--ink-3); }
+
+/* Фото как распечатки, приклеенные скотчем */
+.snap {
+  position: relative;
+  margin: 4px 0 0;
+  padding: 6px 6px 6px;
+  background: var(--white);
+  box-shadow: 0 1px 2px rgba(20, 33, 61, .12), 0 10px 24px -14px rgba(20, 33, 61, .45);
+  transform: rotate(-1.5deg);
+}
+.service:nth-of-type(even) .snap { transform: rotate(1.3deg); }
+.snap::before {
+  content: "";
+  position: absolute; top: -9px; left: 50%;
+  width: 64px; height: 20px;
+  margin-left: -32px;
+  background: rgba(255, 228, 92, .55);
+  transform: rotate(3deg);
+}
+.snap img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* Широкое фото */
+.band { padding: 0 0 96px; }
+.band__photo { margin: 0; }
+.band__photo img { display: block; width: 100%; height: 420px; object-fit: cover; object-position: 50% 55%; border-radius: 3px; }
+.band__note {
+  margin-top: 14px;
+  font-family: "Caveat", cursive;
+  font-size: 26px; line-height: 1.2;
+  color: var(--pen);
+  transform: rotate(-1deg);
+}
 
 /* Как работаем */
 .how__list {
@@ -315,7 +347,10 @@ button { font: inherit; cursor: pointer; }
   .hero { padding: 48px 0 72px; }
   .hero__grid { grid-template-columns: 1fr; gap: 56px; }
   .letter { max-width: 560px; }
-  .services__head, .service, .contact__grid, .faq__grid { grid-template-columns: 1fr; gap: 24px; }
+  .services__head, .contact__grid, .faq__grid { grid-template-columns: 1fr; gap: 24px; }
+  .service { grid-template-columns: 160px 1fr; gap: 20px 28px; }
+  .service .menu { grid-column: 1 / -1; }
+  .band__photo img { height: 320px; }
   .how__list { grid-template-columns: 1fr; }
   .how__list li, .how__list li + li { padding: 24px 0; border-left: 0; border-bottom: 1px solid var(--line); }
 }
@@ -337,7 +372,11 @@ button { font: inherit; cursor: pointer; }
 
   .topics { grid-template-columns: 1fr; }
   .topics a { font-size: 17px; padding: 16px 0; }
-  .service { padding: 28px 0; }
+  .service { padding: 28px 0; grid-template-columns: 1fr; }
+  .snap { width: 78%; margin: 10px 0 4px 6px; }
+  .band { padding-bottom: 64px; }
+  .band__photo img { height: 240px; }
+  .band__note { font-size: 23px; }
   .service__title { font-size: 21px; }
   .menu li { font-size: 15px; }
   .qa summary { font-size: 17px; }
