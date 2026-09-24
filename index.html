@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0B1B3F">
+<meta name="theme-color" content="#FAF8F3">
 <title>NL Assist — помощь с документами, налогами и жильём в Нидерландах</title>
 <meta name="description" content="Помогаем украинцам и русскоязычным в Нидерландах: письма и документы, налоги и возвраты, социальное жильё, работа. Онлайн по всей стране или лично.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="NL Assist — помощь в Нидерландах">
-<meta property="og:description" content="Сфотографируйте письмо — мы объясним, что в нём и что делать дальше. RU / UA.">
+<meta property="og:description" content="Пришлите фото письма — объясним, что в нём и что делать дальше. RU / UA.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- ===================== HEADER ===================== -->
 <header class="header" id="top">
   <div class="container header__inner">
     <a href="#top" class="logo" aria-label="NL Assist">
@@ -27,10 +26,10 @@
     </a>
 
     <nav class="nav" aria-label="Навигация">
-      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#services" data-i18n="nav.services">Услуги и цены</a>
       <a href="#how" data-i18n="nav.how">Как работаем</a>
-      <a href="#prices" data-i18n="nav.prices">Цены</a>
       <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      <a href="#contact" data-i18n="nav.contact">Контакты</a>
     </nav>
 
     <div class="header__actions">
@@ -38,314 +37,219 @@
         <button type="button" class="lang__btn is-active" data-lang="ru">RU</button>
         <button type="button" class="lang__btn" data-lang="uk">UA</button>
       </div>
-      <a href="#contact" class="btn btn--primary btn--sm header__cta" data-i18n="nav.cta">Написать нам</a>
     </div>
   </div>
 </header>
 
 <main>
 
-<!-- ===================== HERO ===================== -->
+<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="container hero__grid">
     <div class="hero__copy">
-      <p class="eyebrow reveal">
-        <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span data-i18n="hero.eyebrow">Онлайн по всем Нидерландам · RU / UA</span>
-      </p>
-      <h1 class="hero__title reveal" data-i18n="hero.title">Разберёмся с&nbsp;документами, налогами и&nbsp;жильём в&nbsp;Нидерландах</h1>
-      <p class="hero__lead reveal" data-i18n="hero.lead">Пришло непонятное письмо? Нужно подать декларацию или заявку на жильё? Объясним всё простым языком и поможем сделать правильно.</p>
+      <h1 class="hero__title" data-i18n="hero.title">Помогаем разобраться с письмами, налогами и жильём в Нидерландах</h1>
+      <p class="hero__lead" data-i18n="hero.lead">Пришлите фото письма, которое пришло на нидерландском. Объясним по-русски или по-украински, что в нём написано и что нужно сделать.</p>
 
-      <div class="hero__cta reveal">
-        <a href="#contact" class="btn btn--primary btn--lg">
-          <span data-i18n="hero.cta">Отправить письмо на разбор</span>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="tel:+31600000000" class="btn btn--ghost btn--lg">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-          <span data-i18n="hero.call">Позвонить</span>
-        </a>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary" data-i18n="hero.cta">Отправить фото письма</a>
+        <a href="tel:+31600000000" class="hero__phone">+31 6 00 00 00 00</a>
       </div>
 
-      <ul class="hero__points reveal">
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.p1">Отвечаем в течение часа</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.p2">Первая консультация бесплатно</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.p3">Онлайн или личная встреча</span></li>
+      <p class="hero__note" data-i18n="hero.note">Первая консультация бесплатно. Работаем онлайн по всей стране, встречи по договорённости.</p>
+    </div>
+
+    <!-- Письмо с пометками: суть сервиса без слов -->
+    <figure class="letter" aria-label="Пример разобранного письма">
+      <div class="letter__paper">
+        <div class="letter__top">
+          <div class="letter__from">
+            <span class="letter__crest"></span>
+            Postbus 1234<br>7300 AB Apeldoorn
+          </div>
+          <div class="letter__to">
+            Mevrouw O. Shevchenko<br>
+            Datum: 12 september 2026
+          </div>
+        </div>
+
+        <div class="letter__row">
+          <p class="letter__h"><mark>Voorlopige aanslag</mark> inkomstenbelasting 2026</p>
+          <p class="note" data-i18n="note.1">предварительный расчёт налога</p>
+        </div>
+        <div class="letter__row">
+          <p>Geachte mevrouw Shevchenko,<br>wij hebben uw voorlopige aanslag berekend. U moet in totaal <mark>€&nbsp;412,00</mark> betalen.</p>
+          <p class="note" data-i18n="note.2">нужно доплатить</p>
+        </div>
+        <div class="letter__row">
+          <p>Betaal het bedrag vóór <mark>31 oktober 2026</mark> op rekening NL86 INGB 0002 4455 88.</p>
+          <p class="note note--red" data-i18n="note.3">срок! не пропустить</p>
+        </div>
+        <div class="letter__row">
+          <p>Bent u het niet eens met deze aanslag? Dan kunt u binnen 6 weken <mark>bezwaar maken</mark>.</p>
+          <p class="note" data-i18n="note.4">если сумма неверная, можно оспорить</p>
+        </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ СИТУАЦИИ ============ -->
+<section class="section situations">
+  <div class="container">
+    <h2 class="h2" data-i18n="sit.title">Обычно нам пишут, когда</h2>
+    <ul class="topics">
+      <li><a href="#contact" data-topic="sit.1"><span data-i18n="sit.1">пришло письмо от Belastingdienst</span></a></li>
+      <li><a href="#contact" data-topic="sit.2"><span data-i18n="sit.2">хочется вернуть переплаченный налог</span></a></li>
+      <li><a href="#contact" data-topic="sit.3"><span data-i18n="sit.3">непонятен контракт от uitzendbureau</span></a></li>
+      <li><a href="#contact" data-topic="sit.4"><span data-i18n="sit.4">нужно оформить zorgtoeslag или huurtoeslag</span></a></li>
+      <li><a href="#contact" data-topic="sit.5"><span data-i18n="sit.5">пришёл штраф от CJIB</span></a></li>
+      <li><a href="#contact" data-topic="sit.6"><span data-i18n="sit.6">нужны DigiD, BSN или регистрация в gemeente</span></a></li>
+      <li><a href="#contact" data-topic="sit.7"><span data-i18n="sit.7">нужно встать в очередь на социальное жильё</span></a></li>
+      <li><a href="#contact" data-topic="sit.8"><span data-i18n="sit.8">нужна работа на складе</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ УСЛУГИ И ЦЕНЫ ============ -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="services__head">
+      <h2 class="h2" data-i18n="srv.title">Услуги и цены</h2>
+      <p class="services__intro" data-i18n="srv.intro">Первая консультация бесплатная. После неё называем точную цену, и вы решаете, нужна ли помощь дальше.</p>
+    </div>
+
+    <div class="service">
+      <div class="service__about">
+        <h3 class="service__title" data-i18n="srv.docs.t">Документы и письма</h3>
+        <p data-i18n="srv.docs.d">Письма от gemeente, Belastingdienst, CAK, страховой. Переводим, объясняем, помогаем ответить.</p>
+      </div>
+      <ul class="menu">
+        <li><span data-i18n="pr.1">Разбор и перевод письма</span><i></i><b><span data-i18n="pr.from">от</span> €25</b></li>
+        <li><span data-i18n="pr.2">Ответ или возражение (bezwaar)</span><i></i><b><span data-i18n="pr.from">от</span> €40</b></li>
+        <li><span data-i18n="pr.3">Заполнение форм и заявлений</span><i></i><b><span data-i18n="pr.from">от</span> €30</b></li>
       </ul>
     </div>
 
-    <!-- Визуал: письмо на нидерландском → понятный ответ в мессенджере -->
-    <div class="hero__visual reveal" aria-hidden="true">
-      <div class="letter">
-        <div class="letter__head">
-          <span class="letter__logo"></span>
-          <span class="letter__meta">Postbus 12345 · 2500 AA</span>
-        </div>
-        <p class="letter__title">Voorlopige aanslag 2026</p>
-        <p class="letter__text">Wij hebben uw voorlopige aanslag berekend. U moet het bedrag van <b>€&nbsp;412,00</b> betalen vóór <b>31 oktober</b>. Bent u het niet eens met deze aanslag? Dan kunt u bezwaar maken.</p>
-        <span class="letter__line"></span>
-        <span class="letter__line letter__line--short"></span>
-        <span class="letter__line"></span>
-        <span class="letter__line letter__line--mid"></span>
+    <div class="service">
+      <div class="service__about">
+        <h3 class="service__title" data-i18n="srv.tax.t">Налоги и пособия</h3>
+        <p data-i18n="srv.tax.d">Декларация, возврат налога, toeslagen. Проверим, не теряете ли вы деньги.</p>
       </div>
+      <ul class="menu">
+        <li><span data-i18n="pr.4">Налоговая декларация (aangifte)</span><i></i><b><span data-i18n="pr.from">от</span> €79</b></li>
+        <li><span data-i18n="pr.5">Заявка на zorgtoeslag / huurtoeslag</span><i></i><b><span data-i18n="pr.from">от</span> €45</b></li>
+        <li><span data-i18n="pr.6">Проверка, положен ли возврат</span><i></i><b data-i18n="pr.free">бесплатно</b></li>
+      </ul>
+    </div>
 
-      <div class="chat">
-        <div class="bubble bubble--out">
-          <span class="bubble__photo">
-            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-8 7"/></svg>
-          </span>
-          <span data-i18n="chat.q">Что это за письмо? 😟</span>
-        </div>
-        <div class="bubble bubble--in">
-          <span class="bubble__name">NL Assist</span>
-          <span data-i18n="chat.a">Это предварительный расчёт налога. Нужно оплатить €412 до 31 октября. Если сумма неверная — подадим возражение, проверим вместе 👍</span>
-        </div>
+    <div class="service">
+      <div class="service__about">
+        <h3 class="service__title" data-i18n="srv.home.t">Социальное жильё</h3>
+        <p data-i18n="srv.home.d">Регистрация у жилищных корпораций и отклики на объявления. Очереди длинные, поэтому объясним честно, на что рассчитывать.</p>
       </div>
+      <ul class="menu">
+        <li><span data-i18n="pr.7">Регистрация и подача заявки</span><i></i><b><span data-i18n="pr.from">от</span> €49</b></li>
+        <li><span data-i18n="pr.8">Подготовка документов</span><i></i><b><span data-i18n="pr.from">от</span> €30</b></li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <div class="service__about">
+        <h3 class="service__title" data-i18n="srv.work.t">Работа</h3>
+        <p data-i18n="srv.work.d">Вакансии на складах и в логистике. Разберём контракт и loonstrook до того, как вы что-то подпишете.</p>
+      </div>
+      <ul class="menu">
+        <li><span data-i18n="pr.9">Разбор контракта или loonstrook</span><i></i><b><span data-i18n="pr.from">от</span> €35</b></li>
+        <li><span data-i18n="pr.10">Помощь с трудоустройством</span><i></i><b data-i18n="pr.deal">по договорённости</b></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ===================== СИТУАЦИИ ===================== -->
-<section class="section situations">
+<!-- ============ КАК РАБОТАЕМ ============ -->
+<section class="section how" id="how">
   <div class="container">
-    <div class="section__head">
-      <p class="kicker" data-i18n="sit.kicker">Узнаёте себя?</p>
-      <h2 class="section__title" data-i18n="sit.title">С чем к нам чаще всего обращаются</h2>
-    </div>
-
-    <div class="chips">
-      <a href="#contact" class="chip" data-topic="sit.1"><span data-i18n="sit.1">Пришло письмо от Belastingdienst</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.2"><span data-i18n="sit.2">Хочу вернуть переплаченный налог</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.3"><span data-i18n="sit.3">Не понимаю контракт от uitzendbureau</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.4"><span data-i18n="sit.4">Нужен zorgtoeslag или huurtoeslag</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.5"><span data-i18n="sit.5">Пришёл штраф от CJIB</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.6"><span data-i18n="sit.6">DigiD, BSN, регистрация в gemeente</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.7"><span data-i18n="sit.7">Хочу встать в очередь на социальное жильё</span><i>→</i></a>
-      <a href="#contact" class="chip" data-topic="sit.8"><span data-i18n="sit.8">Ищу работу на складе</span><i>→</i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== УСЛУГИ ===================== -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="section__head">
-      <p class="kicker" data-i18n="srv.kicker">Услуги</p>
-      <h2 class="section__title" data-i18n="srv.title">Четыре направления — один контакт</h2>
-      <p class="section__lead" data-i18n="srv.lead">Не нужно искать разных специалистов. Напишите нам — разберёмся, что нужно именно в вашей ситуации.</p>
-    </div>
-
-    <div class="bento">
-      <article class="card card--docs reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
-        </div>
-        <h3 class="card__title" data-i18n="srv.docs.t">Документы и письма</h3>
-        <p class="card__text" data-i18n="srv.docs.d">Переводим и объясняем официальные письма, помогаем ответить вовремя и правильно.</p>
-        <ul class="card__list">
-          <li data-i18n="srv.docs.1">Разбор писем от gemeente, Belastingdienst, CAK</li>
-          <li data-i18n="srv.docs.2">Заполнение форм и заявлений</li>
-          <li data-i18n="srv.docs.3">Обращения, возражения (bezwaar) и ответы</li>
-        </ul>
-      </article>
-
-      <article class="card card--tax reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h8"/></svg>
-        </div>
-        <h3 class="card__title" data-i18n="srv.tax.t">Налоги и пособия</h3>
-        <p class="card__text" data-i18n="srv.tax.d">Декларации, возвраты и toeslagen — чтобы вы получили всё, что положено.</p>
-        <ul class="card__list">
-          <li data-i18n="srv.tax.1">Налоговая декларация (aangifte)</li>
-          <li data-i18n="srv.tax.2">Проверка и возврат налога</li>
-          <li data-i18n="srv.tax.3">Zorgtoeslag, huurtoeslag, kinderopvangtoeslag</li>
-        </ul>
-      </article>
-
-      <article class="card card--home reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10M10 20v-6h4v6"/></svg>
-        </div>
-        <h3 class="card__title" data-i18n="srv.home.t">Социальное жильё</h3>
-        <p class="card__text" data-i18n="srv.home.d">Регистрация и подача заявки на социальное жильё, объясним условия и сроки.</p>
-        <ul class="card__list">
-          <li data-i18n="srv.home.1">Регистрация на сайтах жилищных корпораций</li>
-          <li data-i18n="srv.home.2">Подготовка документов</li>
-          <li data-i18n="srv.home.3">Помощь с откликами на объявления</li>
-        </ul>
-      </article>
-
-      <article class="card card--work reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
-        </div>
-        <h3 class="card__title" data-i18n="srv.work.t">Работа</h3>
-        <p class="card__text" data-i18n="srv.work.d">Поможем найти подходящую работу и понять условия до того, как подписывать.</p>
-        <ul class="card__list">
-          <li data-i18n="srv.work.1">Вакансии: склад и логистика</li>
-          <li data-i18n="srv.work.2">Разбор контракта и зарплатных листов (loonstrook)</li>
-          <li data-i18n="srv.work.3">Помощь с резюме и трудоустройством</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== КАК РАБОТАЕМ ===================== -->
-<section class="section section--dark" id="how">
-  <div class="container">
-    <div class="section__head">
-      <p class="kicker kicker--light" data-i18n="how.kicker">Как это работает</p>
-      <h2 class="section__title" data-i18n="how.title">Три шага — и вы знаете, что делать</h2>
-    </div>
-
-    <ol class="steps">
-      <li class="step reveal">
-        <span class="step__num">01</span>
-        <h3 class="step__title" data-i18n="how.1.t">Напишите или позвоните</h3>
-        <p class="step__text" data-i18n="how.1.d">Опишите ситуацию или просто пришлите фото письма в Telegram, WhatsApp или Viber.</p>
+    <h2 class="h2" data-i18n="how.title">Как это происходит</h2>
+    <ol class="how__list">
+      <li>
+        <h3 data-i18n="how.1.t">Вы пишете или звоните</h3>
+        <p data-i18n="how.1.d">Коротко опишите ситуацию или просто пришлите фото письма в Telegram, WhatsApp или Viber.</p>
       </li>
-      <li class="step reveal">
-        <span class="step__num">02</span>
-        <h3 class="step__title" data-i18n="how.2.t">Получите бесплатную оценку</h3>
-        <p class="step__text" data-i18n="how.2.d">Объясним, что происходит, что нужно сделать и сколько будет стоить наша помощь. Без обязательств.</p>
+      <li>
+        <h3 data-i18n="how.2.t">Мы объясняем, что происходит</h3>
+        <p data-i18n="how.2.d">Говорим, что нужно сделать, до какого числа и сколько будет стоить наша помощь. Это бесплатно.</p>
       </li>
-      <li class="step reveal">
-        <span class="step__num">03</span>
-        <h3 class="step__title" data-i18n="how.3.t">Решаем вопрос вместе</h3>
-        <p class="step__text" data-i18n="how.3.d">Онлайн или на личной встрече — заполняем, отправляем и держим вас в курсе до результата.</p>
+      <li>
+        <h3 data-i18n="how.3.t">Делаем вместе</h3>
+        <p data-i18n="how.3.d">Онлайн или при встрече заполняем и отправляем всё нужное. Пишем вам, когда приходит ответ.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ===================== ЦЕНЫ ===================== -->
-<section class="section" id="prices">
-  <div class="container prices">
-    <div class="prices__intro">
-      <p class="kicker" data-i18n="pr.kicker">Цены</p>
-      <h2 class="section__title" data-i18n="pr.title">Честно и заранее</h2>
-      <p class="section__lead" data-i18n="pr.lead">Точную стоимость называем до начала работы — после бесплатной консультации. Никаких скрытых платежей.</p>
-
-      <div class="free">
-        <span class="free__badge" data-i18n="pr.free.badge">Бесплатно</span>
-        <p class="free__title" data-i18n="pr.free.t">Первая консультация</p>
-        <p class="free__text" data-i18n="pr.free.d">Разберём вашу ситуацию и подскажем следующие шаги.</p>
-      </div>
-    </div>
-
-    <ul class="pricelist">
-      <li><span data-i18n="pr.1">Разбор и перевод письма</span><b><span data-i18n="pr.from">от</span> €25</b></li>
-      <li><span data-i18n="pr.2">Ответ, обращение или возражение (bezwaar)</span><b><span data-i18n="pr.from">от</span> €40</b></li>
-      <li><span data-i18n="pr.3">Заявка на toeslagen</span><b><span data-i18n="pr.from">от</span> €45</b></li>
-      <li><span data-i18n="pr.4">Налоговая декларация</span><b><span data-i18n="pr.from">от</span> €79</b></li>
-      <li><span data-i18n="pr.5">Регистрация на социальное жильё</span><b><span data-i18n="pr.from">от</span> €49</b></li>
-      <li><span data-i18n="pr.6">Разбор трудового контракта</span><b><span data-i18n="pr.from">от</span> €35</b></li>
-      <li><span data-i18n="pr.7">Личная встреча</span><b data-i18n="pr.7.p">по договорённости</b></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===================== ПОЧЕМУ МЫ ===================== -->
-<section class="section section--tint">
-  <div class="container">
-    <div class="section__head">
-      <p class="kicker" data-i18n="why.kicker">Почему NL Assist</p>
-      <h2 class="section__title" data-i18n="why.title">Наша задача — не усложнять</h2>
-    </div>
-    <div class="features">
-      <div class="feature reveal">
-        <svg class="feature__icon" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
-        <h3 data-i18n="why.1.t">На вашем языке</h3>
-        <p data-i18n="why.1.d">Общаемся по-русски и по-украински, объясняем без канцелярита.</p>
-      </div>
-      <div class="feature reveal">
-        <svg class="feature__icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <h3 data-i18n="why.2.t">Быстро</h3>
-        <p data-i18n="why.2.d">Отвечаем в течение часа в рабочее время. Сроки по письмам не пропустим.</p>
-      </div>
-      <div class="feature reveal">
-        <svg class="feature__icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        <h3 data-i18n="why.3.t">Конфиденциально</h3>
-        <p data-i18n="why.3.d">Ваши документы видим только мы и используем только для вашего вопроса.</p>
-      </div>
-      <div class="feature reveal">
-        <svg class="feature__icon" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        <h3 data-i18n="why.4.t">Где бы вы ни были</h3>
-        <p data-i18n="why.4.d">Работаем онлайн по всем Нидерландам, при необходимости — встречаемся лично.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FAQ ===================== -->
-<section class="section" id="faq">
-  <div class="container faq">
-    <div class="faq__intro">
-      <p class="kicker" data-i18n="faq.kicker">Вопросы</p>
-      <h2 class="section__title" data-i18n="faq.title">Частые вопросы</h2>
-      <p class="section__lead" data-i18n="faq.lead">Не нашли ответ? Напишите — ответим лично.</p>
-    </div>
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container faq__grid">
+    <h2 class="h2" data-i18n="faq.title">Частые вопросы</h2>
 
     <div class="faq__list">
       <details class="qa">
         <summary data-i18n="faq.1.q">Консультация правда бесплатная?</summary>
-        <p data-i18n="faq.1.a">Да. Вы описываете ситуацию, мы объясняем, что происходит и что можно сделать. Платите только если решите, что нужна наша помощь дальше.</p>
+        <p data-i18n="faq.1.a">Да. Вы описываете ситуацию, мы объясняем, что происходит и что можно сделать. Платите, только если решите, что нужна наша помощь дальше.</p>
       </details>
       <details class="qa">
         <summary data-i18n="faq.2.q">Можно всё сделать онлайн?</summary>
-        <p data-i18n="faq.2.a">Да, большинство вопросов решаем полностью онлайн: фото документов, переписка и звонки. Если удобнее лично — договоримся о встрече.</p>
+        <p data-i18n="faq.2.a">Почти всегда да: фото документов, переписка и звонки. Если удобнее лично, договоримся о встрече.</p>
       </details>
       <details class="qa">
         <summary data-i18n="faq.3.q">Какие документы нужно прислать?</summary>
-        <p data-i18n="faq.3.a">Для начала — только само письмо или описание ситуации. Если понадобится что-то ещё, мы подскажем, что именно и где это найти.</p>
+        <p data-i18n="faq.3.a">Для начала только само письмо или описание ситуации. Если понадобится что-то ещё, подскажем, что именно и где это найти.</p>
       </details>
       <details class="qa">
-        <summary data-i18n="faq.4.q">Вы гарантируете получение жилья или работы?</summary>
-        <p data-i18n="faq.4.a">Нет, и честно говорим об этом. Решения принимают организации и работодатели. Мы помогаем правильно подать документы, не пропустить сроки и повысить шансы.</p>
+        <summary data-i18n="faq.4.q">Вы гарантируете жильё или работу?</summary>
+        <p data-i18n="faq.4.a">Нет. Решения принимают корпорации и работодатели. Мы помогаем правильно подать документы и не пропустить сроки.</p>
       </details>
       <details class="qa">
-        <summary data-i18n="faq.5.q">Как происходит оплата?</summary>
-        <p data-i18n="faq.5.a">Стоимость согласуем заранее. Оплата банковским переводом или через Tikkie после согласования работы.</p>
+        <summary data-i18n="faq.5.q">Как оплатить?</summary>
+        <p data-i18n="faq.5.a">Цену согласуем заранее. Оплата переводом или через Tikkie.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ===================== КОНТАКТ ===================== -->
-<section class="section contact" id="contact">
+<!-- ============ КОНТАКТ ============ -->
+<section class="contact" id="contact">
   <div class="container">
-    <div class="contact__box">
-      <div class="contact__copy">
-        <h2 class="contact__title" data-i18n="ct.title">Напишите нам — это ни к чему не обязывает</h2>
-        <p class="contact__lead" data-i18n="ct.lead">Выберите удобный мессенджер. Можно сразу отправить фото письма.</p>
+    <div class="contact__grid">
+      <div>
+        <h2 class="contact__title" data-i18n="ct.title">Напишите нам</h2>
+        <p class="contact__lead" data-i18n="ct.lead">Можно сразу прислать фото письма. Отвечаем по-русски и по-украински.</p>
         <p class="contact__topic" hidden>
-          <span data-i18n="ct.topic">Ваш вопрос:</span> <b class="contact__topic-text"></b>
+          <span data-i18n="ct.topic">Тема:</span> <b class="contact__topic-text"></b>
         </p>
       </div>
 
-      <div class="messengers">
-        <a class="msg msg--tg" data-msg="tg" href="https://t.me/nlassist" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M21.5 4.3 2.9 11.5c-1.1.4-1.1 1.1-.2 1.4l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.1c.3-1.3-.5-1.9-1.8-1.5zM8.6 14.2l10-6.3c.5-.3.9-.1.5.2l-8.5 7.7-.3 3.6z"/></svg>
-          <span>Telegram</span>
-        </a>
-        <a class="msg msg--wa" data-msg="wa" href="https://wa.me/31600000000" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a17 17 0 0 1-1.8-.7c-3.1-1.3-5.1-4.5-5.3-4.7-.2-.2-1.3-1.7-1.3-3.2S6.3 6.5 6.6 6.2c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.2c.1.2.1.4 0 .6l-.3.5-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.2 1.4z"/></svg>
-          <span>WhatsApp</span>
-        </a>
-        <a class="msg msg--vb" data-msg="vb" href="viber://chat?number=%2B31600000000">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.9 2 3.5 3.6 3.1 8.6c-.2 2.6-.1 5.6.9 7.7.7 1.4 1.8 2.3 3 2.8V22l3-2.4c.7.1 1.3.1 2 .1 5.1 0 8.5-1.6 8.9-6.6.2-2.2.2-4.8 0-7C20.5 3.6 17.1 2 12 2zm4.3 13.3c-.4.6-1.2 1.1-1.9.9-2.5-.8-4.7-2.4-6.2-4.6-.6-.9-1.1-1.9-1.3-3-.1-.7.5-1.4 1.1-1.8.4-.2.9-.1 1.1.2l1 1.5c.2.4.1.8-.2 1.1l-.4.3c-.2.2-.2.4-.1.6.6 1.3 1.6 2.3 2.9 2.9.2.1.5.1.6-.1l.3-.4c.3-.3.8-.4 1.1-.2l1.5 1c.4.3.5.7.5 1z"/></svg>
-          <span>Viber</span>
-        </a>
-      </div>
+      <div class="contact__side">
+        <div class="messengers">
+          <a class="msg msg--tg" data-msg="tg" href="https://t.me/nlassist" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 4.3 2.9 11.5c-1.1.4-1.1 1.1-.2 1.4l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.1c.3-1.3-.5-1.9-1.8-1.5zM8.6 14.2l10-6.3c.5-.3.9-.1.5.2l-8.5 7.7-.3 3.6z"/></svg>
+            Telegram
+          </a>
+          <a class="msg msg--wa" data-msg="wa" href="https://wa.me/31600000000" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a17 17 0 0 1-1.8-.7c-3.1-1.3-5.1-4.5-5.3-4.7-.2-.2-1.3-1.7-1.3-3.2S6.3 6.5 6.6 6.2c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.2c.1.2.1.4 0 .6l-.3.5-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.2 1.4z"/></svg>
+            WhatsApp
+          </a>
+          <a class="msg msg--vb" data-msg="vb" href="viber://chat?number=%2B31600000000">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.9 2 3.5 3.6 3.1 8.6c-.2 2.6-.1 5.6.9 7.7.7 1.4 1.8 2.3 3 2.8V22l3-2.4c.7.1 1.3.1 2 .1 5.1 0 8.5-1.6 8.9-6.6.2-2.2.2-4.8 0-7C20.5 3.6 17.1 2 12 2zm4.3 13.3c-.4.6-1.2 1.1-1.9.9-2.5-.8-4.7-2.4-6.2-4.6-.6-.9-1.1-1.9-1.3-3-.1-.7.5-1.4 1.1-1.8.4-.2.9-.1 1.1.2l1 1.5c.2.4.1.8-.2 1.1l-.4.3c-.2.2-.2.4-.1.6.6 1.3 1.6 2.3 2.9 2.9.2.1.5.1.6-.1l.3-.4c.3-.3.8-.4 1.1-.2l1.5 1c.4.3.5.7.5 1z"/></svg>
+            Viber
+          </a>
+        </div>
 
-      <div class="contact__alt">
-        <a href="tel:+31600000000" class="contact__phone">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-          +31 6 00 00 00 00
-        </a>
-        <a href="https://instagram.com/nlassist.nl" target="_blank" rel="noopener" class="contact__ig">Instagram @nlassist.nl</a>
-        <span class="contact__hours" data-i18n="ct.hours">Пн–Сб, 9:00–20:00</span>
+        <dl class="contact__info">
+          <div><dt data-i18n="ct.phone">Телефон</dt><dd><a href="tel:+31600000000">+31 6 00 00 00 00</a></dd></div>
+          <div><dt data-i18n="ct.hours.t">Часы</dt><dd data-i18n="ct.hours">Пн–Сб, 9:00–20:00</dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://instagram.com/nlassist.nl" target="_blank" rel="noopener">@nlassist.nl</a></dd></div>
+        </dl>
       </div>
     </div>
   </div>
@@ -353,19 +257,13 @@
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="container footer__inner">
-    <div>
-      <a href="#top" class="logo logo--light"><span class="logo__mark">NL</span><span class="logo__text">Assist</span></a>
-      <p class="footer__tag" data-i18n="ft.tag">Помощь в Нидерландах · Работа · Жильё · Налоги · Документы</p>
-    </div>
-    <p class="footer__note" data-i18n="ft.note">NL Assist оказывает информационную и организационную помощь. Мы не являемся юридической фирмой или государственной организацией.</p>
-    <p class="footer__copy">© <span class="js-year">2026</span> NL Assist</p>
+    <p>© <span class="js-year">2026</span> NL Assist</p>
+    <p class="footer__note" data-i18n="ft.note">NL Assist оказывает информационную и организационную помощь. Мы не юридическая фирма и не государственная организация.</p>
   </div>
 </footer>
 
-<!-- Мобильная панель мессенджеров -->
 <div class="dock" aria-label="Быстрая связь">
   <a class="dock__btn msg--tg" data-msg="tg" href="https://t.me/nlassist" target="_blank" rel="noopener">Telegram</a>
   <a class="dock__btn msg--wa" data-msg="wa" href="https://wa.me/31600000000" target="_blank" rel="noopener">WhatsApp</a>
